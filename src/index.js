@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const  mongoose = require('mongoose');
 const route = require('./route/route.js');
 const app = express();
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
